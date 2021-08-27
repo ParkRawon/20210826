@@ -13,12 +13,18 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.micol.prj.command.MainCommand;
 import co.micol.prj.common.Command;
+import co.micol.prj.member.map.IdCheck;
 import co.micol.prj.member.map.MemberDelete;
+import co.micol.prj.member.map.MemberEdit;
+import co.micol.prj.member.map.MemberEditForm;
+import co.micol.prj.member.map.MemberJoin;
 import co.micol.prj.member.map.MemberJoinForm;
 import co.micol.prj.member.map.MemberList;
 import co.micol.prj.member.map.MemberLogin;
 import co.micol.prj.member.map.MemberLoginForm;
 import co.micol.prj.member.map.MemberSelect;
+import co.micol.prj.notice.map.NoticeList;
+import co.micol.prj.notice.map.NoticeSelect;
 
 
 @WebServlet("*.do")
@@ -41,6 +47,12 @@ public class FrontController extends HttpServlet {
 		map.put("/memberLogin.do", new MemberLogin());   //로그인하기
 		map.put("/memberLoginForm.do", new MemberLoginForm()); //로그인폼 호출
 		map.put("/memberJoinForm.do", new MemberJoinForm()); //회원가입폼 호출
+		map.put("/memberJoin.do", new MemberJoin());  //회원가입
+		map.put("/idCheck.do", new IdCheck());  //아이디중복체크
+		map.put("/memberEditForm.do", new MemberEditForm()); //수정폼 호출
+		map.put("/memberEdit.do", new MemberEdit());
+		map.put("/noticeList.do", new NoticeList());
+		map.put("/noticeSelect.do", new NoticeSelect()); //공지사항 세부정보 보기
 	}
 
 	

@@ -77,7 +77,7 @@ public class MemberServiceImpl implements MemberService {
 	}
 
 	@Override
-	public int memberInsert(MemberVO vo) {
+	public int memberInsert(MemberVO vo) {   
 		String sql = "insert into member values(?,?,?,?)";
 		int n = 0;
 		try {
@@ -154,6 +154,28 @@ public class MemberServiceImpl implements MemberService {
 			close();
 		}
 		return vo;
+	}
+
+	@Override
+	public boolean isIdCheck(String str) {
+		// 중복 아이디 체크 : 존재하면 false값을 리턴한다.
+		boolean b = true;  //id가 없을때
+		String sql = "select id from member where id=?";
+		
+		try {
+			conn = dao.getConnection();
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, str);
+			rs = psmt.executeQuery();
+			if(rs.next()) {
+				b = false; //id가 있을때
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+		return b;
 	}
 
 }

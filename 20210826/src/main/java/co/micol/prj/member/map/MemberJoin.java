@@ -8,22 +8,26 @@ import co.micol.prj.member.service.MemberService;
 import co.micol.prj.member.serviceImpl.MemberServiceImpl;
 import co.micol.prj.member.vo.MemberVO;
 
-public class MemberDelete implements Command {
+public class MemberJoin implements Command {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
-		MemberService memberDao = new MemberServiceImpl();   //dao인스턴스 생성하기
-		MemberVO member = new MemberVO();  //membervo타입으로 결과받기위해
+		MemberService memberDao = new MemberServiceImpl();
+		MemberVO member = new MemberVO();
 		member.setId(request.getParameter("id"));
-		int n = memberDao.memberDelete(member);
-		String page = null;
+		member.setPassWord(request.getParameter("password"));
+		member.setName(request.getParameter("name"));
+		member.setAddress(request.getParameter("address"));
+		
+		int n = memberDao.memberInsert(member);
+		
 		if(n != 0) {
-			page = "memberList.do";
+			request.setAttribute("message", "가입 성공");
 		} else {
-			request.setAttribute("msg", "회원정보 삭제시 오류발생!!");
-			page = "member/memberError";
+			request.setAttribute("message", "가입 오류");
 		}
-		return page;
+		
+		return "member/memberJoinResult";
 	}
 
 }

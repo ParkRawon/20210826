@@ -9,7 +9,7 @@ public class MainCommand implements Command {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
-		// 홈 페이지 호출
+		// 홈(main) 페이지 호출
 		return "main/main";
 	}
 

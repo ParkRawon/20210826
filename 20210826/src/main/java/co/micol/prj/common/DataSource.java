@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class DataSource {
+public class DataSource {  //DAO
 	private static DataSource dataSource = new DataSource();  //싱글톤 클래스
 	
 	private DataSource() {}   //외부에서 생성하지 못하도록 private생성

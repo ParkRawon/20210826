@@ -8,7 +8,7 @@
 <script type="text/javascript">
 	function CallMember(str) {
 		if(str == "U") {
-			frm.action = "memberEdit.do";
+			frm.action = "memberEditForm.do";
 		}else {
 			frm.action = "memberDelete.do";
 		}

@@ -14,6 +14,7 @@
 	</div>
 	<div>
 		<a href="memberList.do">LIST</a>
+		<a href="noticeList.do">NOTICE</a>
 	</div>
 </div>
 </body>

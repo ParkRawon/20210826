@@ -11,5 +11,6 @@ public interface MemberService {
 	int memberUpdate(MemberVO vo);  //멤버 수정
 	int memberDelete(MemberVO vo);  //멤버 삭제
 	MemberVO memberLogin(MemberVO vo); //Login 처리를 위해
+	boolean isIdCheck(String str);    //아이디 중복 체크 is:존재하면 false
 
 }

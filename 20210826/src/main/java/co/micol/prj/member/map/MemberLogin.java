@@ -18,6 +18,7 @@ public class MemberLogin implements Command {
 		member.setPassWord(request.getParameter("password"));
 		
 		member = memberDao.memberLogin(member);
+		
 		String page = null;
 		if(member.getName() != null) {
 			request.setAttribute("message", "님 환영합니다." );
