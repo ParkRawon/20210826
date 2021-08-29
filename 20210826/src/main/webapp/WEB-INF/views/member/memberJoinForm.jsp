@@ -70,7 +70,7 @@
 			</table>
 			</div><br/>
 			<div>
-				<input type="button" onclick="login()" value="회원가입">&nbsp;&nbsp;&nbsp;
+				<input type="button"  value="글쓰기">&nbsp;&nbsp;&nbsp;
 				<input type="reset" value="취 소">&nbsp;&nbsp;&nbsp;
 				<input type="button" value="홈 가기" onclick="location.href='main.do'">
 			</div>

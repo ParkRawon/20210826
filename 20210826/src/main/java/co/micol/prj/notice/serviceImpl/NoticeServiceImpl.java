@@ -87,6 +87,7 @@ public class NoticeServiceImpl implements NoticeService {
 
 	@Override
 	public int noticeInsert(NoticeVO vo) {
+		//글쓰기
 		int n = 0;
 		String sql = "insert into notice(id,writer,writedate,title,contents)"+"values(?,?,?,?,?)";
 		try {
@@ -107,6 +108,7 @@ public class NoticeServiceImpl implements NoticeService {
 
 	@Override
 	public int noticeUpdate(NoticeVO vo) {
+		//글수정
 		int n = 0;
 		String sql = "update notice set writedate=?, title=?, contents=? where id=?";
 		try {
@@ -125,6 +127,7 @@ public class NoticeServiceImpl implements NoticeService {
 
 	@Override
 	public int noticeDelete(NoticeVO vo) {
+		//글삭제
 		int n = 0;
 		String sql = "delete from notice where id=?";
 		try {
