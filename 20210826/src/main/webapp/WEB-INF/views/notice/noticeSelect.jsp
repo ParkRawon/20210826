@@ -24,19 +24,19 @@
 		<table border="1">
 			<tr>
 				<th width="70">순번</th>
-				<td width="100">${notice.id }</td>
+				<td width="100">${notices.id }</td>
 				<th width="70">작성자</th>
-				<td width="100">${notice.writer }</td>
+				<td width="100">${notices.writer }</td>
 				<th width="80">작성 날짜</th>
-				<td width="100">${notice.writeDate }</td>
+				<td width="100">${notices.writeDate }</td>
 				<th width="70">제목</th>
-				<td width="100">${notice.title }</td>
+				<td width="150">${notices.title }</td>
 				<th width="70">조회수</th>
-				<td width="100">${notice.hit }</td>
+				<td width="100">${notices.hit }</td>
 			</tr>
 			<tr>
 				<th width="70">내용</th>
-				<td colspan="9">${notice.contents }</td>
+				<td colspan="9">${notices.contents }</td>
 			</tr>		
 		</table>
 	</div><br/>
@@ -47,7 +47,7 @@
 	</div>
 	<div>
 		<form id="frm" action="" method="post">
-			<input type="hidden" id="id" name="id" value="${notice.id }">
+			<input type="hidden" id="id" name="id" value="${notices.id }">
 		</form>
 	</div>
 </div>

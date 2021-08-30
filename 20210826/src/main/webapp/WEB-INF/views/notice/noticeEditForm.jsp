@@ -15,27 +15,27 @@
 				<table border="1">
 					<tr>
 						<th width = "100">순 번</th>
-						<td width="300"><input type="text" id="id" name="id" value="${notice.id }" readonly></td>
+						<td width="300"><input type="text" id="id" name="id" value="${notices.id }" readonly></td>
 					</tr>
 					<tr>
 						<th width = "100">작성자</th>
-						<td width="300"><input type="text" id="writer" name="writer" value="${notice.writer }" readonly ></td>
+						<td width="300"><input type="text" id="writer" name="writer" value="${notices.writer }" readonly ></td>
 					</tr>
 					<tr>
 						<th width = "100">작성날짜</th>
-						<td width="300"><input type="date" id="writeDate" name="writeDate" value="${notice.writeDate }" ></td>
+						<td width="300"><input type="date" id="writeDate" name="writeDate" value="${notices.writeDate }" ></td>
 					</tr>
 					<tr>
 						<th width = "100">제 목</th>
-						<td width="300"><input type="text" id="title" name="title" value="${notice.title }" ></td>
+						<td width="300"><input type="text" id="title" name="title" value="${notices.title }" ></td>
 					</tr>
 					<tr>
 						<th width = "100">내 용</th>
-						<td width="300"><input type="text" id="contents" name="contents" value="${notice.contents }" ></td>
+						<td width="300"><input type="text" id="contents" name="contents" value="${notices.contents }" ></td>
 					</tr>
 					<tr>
 						<th width = "100">조회수</th>
-						<td width="300"><input type="text" id="hit" name="hit" value="${notice.hit }" readonly></td>
+						<td width="300"><input type="text" id="hit" name="hit" value="${notices.hit }" readonly></td>
 					</tr>
 				</table>
 			</div><br/>

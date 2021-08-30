@@ -62,7 +62,7 @@ public class FrontController extends HttpServlet {
 		map.put("/noticeEditForm.do", new NoticeEditForm()); //수정폼 호출
 		map.put("/noticeEdit.do", new NoticeEdit()); //공지사항 수정하기
 		map.put("/noticeInsert.do", new NoticeInsert()); //글쓰기
-		map.put("/noticeInsertForm", new NoticeInsertForm()); //글쓰기 폼 호출
+		map.put("/noticeInsertForm.do", new NoticeInsertForm()); //글쓰기 폼 호출
 	}
 
 	

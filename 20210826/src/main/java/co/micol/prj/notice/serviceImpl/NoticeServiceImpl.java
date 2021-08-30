@@ -47,7 +47,7 @@ public class NoticeServiceImpl implements NoticeService {
 	@Override
 	public NoticeVO noticeSelect(NoticeVO vo) {
 		// 보드정보보기
-		String sql = "select * from where id=?";
+		String sql = "select * from notice where id = ?";
 		try {
 			conn = dao.getConnection();
 			psmt = conn.prepareStatement(sql);

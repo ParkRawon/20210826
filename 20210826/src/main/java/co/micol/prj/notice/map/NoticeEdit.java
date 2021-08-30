@@ -1,5 +1,8 @@
 package co.micol.prj.notice.map;
 
+import java.sql.Date;
+
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -16,7 +19,7 @@ public class NoticeEdit implements Command {
 		NoticeService noticeDao =  new NoticeServiceImpl();
 		NoticeVO notices = new NoticeVO();
 		notices.setId(Integer.parseInt(request.getParameter("id")));
-		notices.setWriteDate(request.getParameter("writeDate"));
+		notices.setWriteDate(Date.valueOf(request.getParameter("writeDate")));
 		notices.setTitle(request.getParameter("title"));
 		notices.setContents(request.getParameter("contents"));
 		notices.setHit(Integer.parseInt(request.getParameter("hit")));

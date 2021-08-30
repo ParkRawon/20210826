@@ -57,6 +57,7 @@ public class MemberServiceImpl implements MemberService {
 	@Override
 	public MemberVO memberSelect(MemberVO vo) {
 		String sql = "select * from member where id = ?";
+		System.out.println(vo.getId());
 		try {
 			conn = dao.getConnection();
 			psmt = conn.prepareStatement(sql);
