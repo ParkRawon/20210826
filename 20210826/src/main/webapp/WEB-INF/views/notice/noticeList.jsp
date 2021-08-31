@@ -37,7 +37,7 @@
 		</table>	
 	</div><br/>
 	<div>
-		<button type="button" onclick="location.href='main.do'">홈가기</button>
+		<button type="button" onclick="location.href='main.do'">홈가기</button>&nbsp;&nbsp;&nbsp;
 		<button type="button" onclick="location.href='noticeInsertForm.do'">글쓰기</button>
 	</div>
 	<div>
